@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ratna Mayasari M.M - Business Builder & Organizational System Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --navy: #0b1e36;
+            --gold: #b58d4c;
+            --ivory: #faf9f7;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--ivory);
+        }
+        
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .bg-navy {
+            background-color: var(--navy);
+        }
+        
+        .text-navy {
+            color: var(--navy);
+        }
+        
+        .bg-gold {
+            background-color: var(--gold);
+        }
+        
+        .text-gold {
+            color: var(--gold);
+        }
+        
+        .border-gold {
+            border-color: var(--gold);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(11, 30, 54, 0.15);
+        }
+        
+        .profile-frame {
+            position: relative;
+            border-radius: 40% 60% 60% 40% / 50% 50% 50% 50%;
+            overflow: hidden;
+            animation: morph 8s ease-in-out infinite;
+        }
+        
+        @keyframes morph {
+            0%, 100% {
+                border-radius: 40% 60% 60% 40% / 50% 50% 50% 50%;
+            }
+            50% {
+                border-radius: 60% 40% 40% 60% / 50% 50% 50% 50%;
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        
+        .skill-card {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .skill-card.active {
+            background-color: var(--navy);
+            color: white;
+        }
+        
+        .skill-card.active i {
+            color: var(--gold);
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .pillar-card {
+            transition: all 0.3s ease;
+        }
+        
+        .pillar-card:hover {
+            border-color: var(--gold);
+        }
+        
+        .pillar-card:hover i {
+            color: var(--gold);
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="min-h-screen bg-gradient-to-br from-[#faf9f7] to-[#f0efe9] py-16 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <!-- Left: Profile Image -->
+                <div class="lg:w-1/2 flex justify-center">
+                    <div class="profile-frame w-80 h-80 md:w-96 md:h-96 flex items-center justify-center border-4 border-[#b58d4c] shadow-2xl overflow-hidden">
+                        <img src="SUSUU.jpeg" alt="Ratna Mayasari M.M" class="w-full h-full object-cover" style="animation: float 6s ease-in-out infinite;">
+                    </div>
+                </div>
+                
+                <!-- Right: Content -->
+                <div class="lg:w-1/2 text-center lg:text-left">
+                    <h1 class="font-playfair text-5xl md:text-6xl lg:text-7xl font-bold text-navy mb-4">
+                        Ratna Mayasari.M
+                    </h1>
+                    <p class="text-lg md:text-xl text-gold font-semibold tracking-widest uppercase mb-2">
+                        Wakil Direktur PT Multi Klin Nusantara
+                    </p>
+                    <p class="text-base md:text-lg text-navy/70 font-medium mb-6 tracking-wide">
+                        BUSINESS BUILDER & ORGANIZATIONAL SYSTEM DEVELOPER
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
+                        <button class="bg-navy text-white px-8 py-3 rounded-full font-semibold hover-scale hover:bg-[#1a3a5c] transition-all">
+                            <i class="fas fa-lightbulb mr-2 text-gold"></i>
+                            PENCIPTA HUMAN FLOW FRAMEWORK
+                        </button>
+                    </div>
+                    
+                    <div class="border-l-4 border-gold pl-6">
+                        <p class="font-playfair text-xl md:text-2xl italic text-navy/80 leading-relaxed">
+                            "Dari Legalitas hingga Operasional, dari Manusia hingga Sistem."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fokus Keahlian Section -->
+    <section class="py-20 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-playfair text-4xl md:text-5xl font-bold text-navy mb-4">Fokus Keahlian</h2>
+                <p class="text-navy/60 text-lg">Klik untuk melihat penjelasan mendalam</p>
+            </div>
+            
+            <!-- Skill Cards Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
+                <div class="skill-card bg-[#faf9f7] border-2 border-transparent rounded-2xl p-6 text-center hover-scale" data-skill="1">
+                    <i class="fas fa-building text-4xl text-navy mb-3"></i>
+                    <p class="font-semibold text-sm text-navy">Membangun Perusahaan dari Nol</p>
+                </div>
+                <div class="skill-card bg-[#faf9f7] border-2 border-transparent rounded-2xl p-6 text-center hover-scale" data-skill="2">
+                    <i class="fas fa-file-contract text-4xl text-navy mb-3"></i>
+                    <p class="font-semibold text-sm text-navy">Legalitas & Perizinan Usaha</p>
+                </div>
+                <div class="skill-card bg-[#faf9f7] border-2 border-transparent rounded-2xl p-6 text-center hover-scale" data-skill="3">
+                    <i class="fas fa-box text-4xl text-navy mb-3"></i>
+                    <p class="font-semibold text-sm text-navy">Pengembangan Produk FMCG</p>
+                </div>
+                <div class="skill-card bg-[#faf9f7] border-2 border-transparent rounded-2xl p-6 text-center hover-scale" data-skill="4">
+                    <i class="fas fa-industry text-4xl text-navy mb-3"></i>
+                    <p class="font-semibold text-sm text-navy">Sistem Produksi & Operasional</p>
+                </div>
+                <div class="skill-card bg-[#faf9f7] border-2 border-transparent rounded-2xl p-6 text-center hover-scale" data-skill="5">
+                    <i class="fas fa-users text-4xl text-navy mb-3"></i>
+                    <p class="font-semibold text-sm text-navy">Pengembangan Organisasi & SDM</p>
+                </div>
+                <div class="skill-card bg-[#faf9f7] border-2 border-transparent rounded-2xl p-6 text-center hover-scale" data-skill="6">
+                    <i class="fas fa-chart-line text-4xl text-navy mb-3"></i>
+                    <p class="font-semibold text-sm text-navy">Pemasaran & Distribusi</p>
+                </div>
+            </div>
+            
+            <!-- Dynamic Content Box -->
+            <div id="skill-content" class="bg-gradient-to-br from-[#0b1e36] to-[#1a3a5c] rounded-3xl p-8 md:p-12 text-white">
+                <div class="fade-in">
+                    <h3 class="font-playfair text-2xl md:text-3xl font-bold mb-4 text-gold">Membangun Perusahaan dari Nol</h3>
+                    <p class="text-white/90 leading-relaxed text-lg">
+                        Pendirian perusahaan bukan hanya tentang mendaftarkan badan hukum, tetapi membangun fondasi yang kokoh untuk pertumbuhan jangka panjang. Mulai dari penetapan visi-misi, struktur organisasi yang tepat, hingga business model yang scalable. Saya membantu entrepreneurs mewujudkan ide menjadi entitas bisnis yang berdaya tahan dan menguntungkan.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Saya Section -->
+    <section class="py-20 px-4 bg-[#faf9f7]">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-playfair text-4xl md:text-5xl font-bold text-navy mb-4">Tentang Saya</h2>
+                <div class="w-24 h-1 bg-gold mx-auto"></div>
+            </div>
+            
+            <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl">
+                <p class="text-navy/80 leading-relaxed text-lg mb-6">
+                    Dengan pengalaman puluhan tahun memimpin divisi produksi, operasional, dan pemasaran di industri manufaktur FMCG, saya telah melihat secara langsung bagaimana sistem yang baik dapat mengubah kesulitan menjadi peluang. Setiap tahapan karir mengajarkan bahwa bisnis yang sukses bukan hanya tentang produk atau pasar, tetapi tentang <strong class="text-navy">manusia di belakangnya dan sistem yang mendukung mereka.</strong>
+                </p>
+                <p class="text-navy/80 leading-relaxed text-lg mb-6">
+                    Passion saya adalah membangun sistem kerja yang sehat, efisien, dan berkelanjutan. Saya percaya bahwa setiap perusahaan memiliki potensi untuk menjadi organisasi yang mandiri (semi-autopilot), asalkan memiliki fondasi yang kuat: struktur yang jelas, alur kerja yang terdefinisi, komunikasi yang efektif, dan tim yang bertanggung jawab.
+                </p>
+                <p class="text-navy/80 leading-relaxed text-lg">
+                    Melalui Human Flow Framework, saya membantu perusahaan-perusahaan bertransformasi dari yang bergantung pada individu menjadi organisasi yang bergantung pada sistem. Dari legalitas hingga operasional, dari manusia hingga sistem — semua terintegrasi dalam satu alur yang harmonis.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Human Flow Framework Section -->
+    <section class="py-20 px-4 bg-navy text-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-playfair text-4xl md:text-5xl font-bold mb-4">Human Flow Framework</h2>
+                <div class="w-24 h-1 bg-gold mx-auto mb-6"></div>
+                <p class="text-white/80 text-lg max-w-3xl mx-auto">
+                    Pendekatan sistematis menuju organisasi semi-autopilot yang mengintegrasikan manusia, peran, alur kerja, komunikasi, dan pengambilan keputusan.
+                </p>
+            </div>
+            
+            <!-- 6 Pillars -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="pillar-card bg-white/5 border-2 border-white/10 rounded-2xl p-8 hover-scale">
+                    <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-brain text-3xl text-white"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold mb-3 text-gold">Self Mastery</h3>
+                    <p class="text-white/70">Pengembangan kesadaran diri dan pengendalian emosi sebagai fondasi kepemimpinan yang efektif.</p>
+                </div>
+                <div class="pillar-card bg-white/5 border-2 border-white/10 rounded-2xl p-8 hover-scale">
+                    <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-hand-holding-heart text-3xl text-white"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold mb-3 text-gold">Responsibility & Accountability</h3>
+                    <p class="text-white/70">Membangun budaya tanggung jawab di mana setiap anggota tim memiliki ownership atas perannya.</p>
+                </div>
+                <div class="pillar-card bg-white/5 border-2 border-white/10 rounded-2xl p-8 hover-scale">
+                    <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-id-card text-3xl text-white"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold mb-3 text-gold">Role Clarity</h3>
+                    <p class="text-white/70">Pendefinisian peran, wewenang, dan tanggung jawab yang jelas untuk menghindari tumpang tindih.</p>
+                </div>
+                <div class="pillar-card bg-white/5 border-2 border-white/10 rounded-2xl p-8 hover-scale">
+                    <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-project-diagram text-3xl text-white"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold mb-3 text-gold">Workflow Design</h3>
+                    <p class="text-white/70">Perancangan alur kerja yang efisien, terdokumentasi, dan dapat diukur untuk setiap proses.</p>
+                </div>
+                <div class="pillar-card bg-white/5 border-2 border-white/10 rounded-2xl p-8 hover-scale">
+                    <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-comments text-3xl text-white"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold mb-3 text-gold">Communication Flow</h3>
+                    <p class="text-white/70">Sistem komunikasi yang terstruktur, transparan, dan efektif antar departemen.</p>
+                </div>
+                <div class="pillar-card bg-white/5 border-2 border-white/10 rounded-2xl p-8 hover-scale">
+                    <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-rocket text-3xl text-white"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold mb-3 text-gold">Semi-Autopilot Organization</h3>
+                    <p class="text-white/70">Puncak transformasi di mana organisasi dapat berjalan optimal tanpa ketergantungan individu.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer & Kontak -->
+    <footer class="bg-[#050d18] text-white py-16 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Brand -->
+                <div class="lg:col-span-1">
+                    <h3 class="font-playfair text-2xl font-bold mb-4 text-gold">Ratna Mayasari M.M</h3>
+                    <p class="text-white/60">Business Builder & Organizational System Developer</p>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-semibold text-lg mb-4 text-gold">Kontak</h4>
+                    <div class="space-y-3">
+                        <p class="text-white/70 flex items-center gap-3">
+                            <i class="fas fa-map-marker-alt text-gold"></i>
+                            Makassar, Sulawesi Selatan
+                        </p>
+                        <p class="text-white/70 flex items-center gap-3">
+                            <i class="fas fa-envelope text-gold"></i>
+                            Email: info@multiklin.com
+                        </p>
+                        <p class="text-white/70 flex items-center gap-3">
+                            <i class="fas fa-globe text-gold"></i>
+                            www.multiklin.com
+                        </p>
+                        <p class="text-white/70 flex items-center gap-3">
+                            <i class="fas fa-phone text-gold"></i>
+                            WhatsApp: +6281355528377
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Social Media -->
+                <div>
+                    <h4 class="font-semibold text-lg mb-4 text-gold">Media Sosial</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold transition-all hover-scale">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="https://instagram.com/ratna.mayasari.m" target="_blank" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold transition-all hover-scale">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold transition-all hover-scale">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Company -->
+                <div>
+                    <h4 class="font-semibold text-lg mb-4 text-gold">Perusahaan</h4>
+                    <p class="text-white/70">PT Multi Klin Nusantara</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 text-center">
+                <p class="text-white/50 text-sm">
+                    © 2026 Ratna Mayasari M.M. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Skill Content Data
+        const skillContents = {
+            1: {
+                title: "Membangun Perusahaan dari Nol",
+                text: "Pendirian perusahaan bukan hanya tentang mendaftarkan badan hukum, tetapi membangun fondasi yang kokoh untuk pertumbuhan jangka panjang. Mulai dari penetapan visi-misi, struktur organisasi yang tepat, hingga business model yang scalable. Saya membantu entrepreneurs mewujudkan ide menjadi entitas bisnis yang berdaya tahan dan menguntungkan."
+            },
+            2: {
+                title: "Legalitas & Perizinan Usaha",
+                text: "Legalitas adalah pondasi kepercayaan dan keberlangsungan bisnis. Dari pendirian badan hukum (PT, CV), NIB, PIRT, BPOM, hingga perizinan industri dan lingkungan. Saya memastikan bisnis Anda beroperasi sesuai regulasi tanpa hambatan hukum yang dapat mengganggu operasional di kemudian hari."
+            },
+            3: {
+                title: "Pengembangan Produk FMCG",
+                text: "Produk FMCG yang sukses membutuhkan lebih dari sekadar formula bagus. Dari riset pasar, pengembangan formula, uji coba, hingga standardisasi kualitas. Dengan pengalaman di industri manufaktur, saya membantu menciptakan produk yang diterima pasar dan dapat diproduksi secara konsisten."
+            },
+            4: {
+                title: "Sistem Produksi & Operasional",
+                text: "Efisiensi operasional adalah jantung dari manufaktur. Perancangan layout pabrik, SOP produksi, quality control, manajemen inventori, hingga maintenance mesin. Sistem yang baik mengurangi waste, menaikkan produktivitas, dan memastikan konsistensi produk yang dihasilkan."
+            },
+            5: {
+                title: "Pengembangan Organisasi & SDM",
+                text: "Organisasi yang hebat dibangun dari orang-orang hebat dan sistem yang mendukungnya. Rekrutmen yang tepat, training terstruktur, sistem penilaian kinerja, career path yang jelas, dan budaya perusahaan yang positif. Ini adalah investasi jangka panjang yang memberikan return terbesar."
+            },
+            6: {
+                title: "Pemasaran & Distribusi",
+                text: "Produk bagus tidak cukup tanpa strategi pemasaran dan distribusi yang tepat. Brand positioning, channel strategy, sales management, hingga logistik distribusi. Saya membantu membangun jaringan yang luas dan sistem penjualan yang sustainable untuk menjangkau seluruh pasar Indonesia."
+            }
+        };
+
+        // Get all skill cards
+        const skillCards = document.querySelectorAll('.skill-card');
+        const skillContent = document.getElementById('skill-content');
+
+        // Add click event to each card
+        skillCards.forEach(card => {
+            card.addEventListener('click', function() {
+                // Remove active class from all cards
+                skillCards.forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked card
+                this.classList.add('active');
+                
+                // Get skill number
+                const skillNum = this.dataset.skill;
+                
+                // Update content with animation
+                skillContent.innerHTML = `
+                    <div class="fade-in">
+                        <h3 class="font-playfair text-2xl md:text-3xl font-bold mb-4 text-gold">${skillContents[skillNum].title}</h3>
+                        <p class="text-white/90 leading-relaxed text-lg">${skillContents[skillNum].text}</p>
+                    </div>
+                `;
+            });
+        });
+
+        // Set first card as active on load
+        skillCards[0].classList.add('active');
+    </script>
+</body>
+</html>

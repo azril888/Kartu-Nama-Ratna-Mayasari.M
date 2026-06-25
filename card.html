@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Business Card - Ratna MayaSari.M</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --navy: #0b1e36;
+            --gold: #b58d4c;
+            --ivory: #faf9f7;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--navy);
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { 
+                box-shadow: 0 0 0 0 rgba(181, 141, 76, 0.5);
+            }
+            50% { 
+                box-shadow: 0 0 0 12px rgba(181, 141, 76, 0);
+            }
+        }
+        
+        .float-animation {
+            animation: float 4s ease-in-out infinite;
+        }
+        
+        .pulse {
+            animation: pulse 2.5s infinite;
+        }
+        
+        .hover-lift {
+            transition: all 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-5px);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="w-full max-w-md mx-auto">
+        <!-- Main Card -->
+        <div class="bg-[#faf9f7] rounded-2xl shadow-xl p-8 hover-lift">
+            
+            <!-- Foto Profil -->
+            <div class="text-center mb-6">
+                <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-[#b58d4c] shadow-lg float-animation">
+                    <img src="1000129213.jpg" alt="Ratna Maya Sari Makatita" class="w-full h-full object-cover">
+                </div>
+            </div>
+            
+            <!-- Nama & Jabatan -->
+            <div class="text-center mb-6">
+                <h1 class="font-playfair text-2xl font-bold text-[#0b1e36] mb-2">
+                    Ratna Mayasari.M
+                </h1>
+                <p class="text-sm text-[#b58d4c] mb-1 font-semibold">Wakil Direktur</p>
+                <p class="text-sm text-[#0b1e36]/70">PT. Multi Klin Nusantara</p>
+            </div>
+            
+            <!-- Garis Pembatas -->
+            <div class="w-16 h-1 bg-[#b58d4c] mx-auto mb-6 rounded-full"></div>
+            
+            <!-- Deskripsi -->
+            <div class="text-center mb-6">
+                <p class="text-sm text-[#0b1e36]/80 leading-relaxed">
+                    Perusahaan yang bergerak dibidang produk sanitasi atau bahan pembersih. 
+                    <span class="font-semibold text-[#b58d4c]">Visi kami, selalu ada disetiap rumah di Indonesia.</span>
+                </p>
+            </div>
+            
+            <!-- Tombol Website -->
+            <div class="mb-4">
+                <a href="index.html" class="block w-full bg-[#b58d4c] hover:bg-[#c99a5c] text-white text-sm font-semibold py-3 px-4 rounded-xl text-center hover-scale pulse">
+                    <i class="fas fa-external-link-alt mr-2"></i>
+                    Website
+                </a>
+            </div>
+            
+            <!-- Tombol Website Perusahaan -->
+            <div class="mb-6">
+                <a href="https://multiklinnusantara.com/" class="block w-full bg-gray-700 hover:bg-gray-600 text-white text-sm font-semibold py-3 px-4 rounded-xl text-center hover-scale">
+                    <i class="fas fa-building mr-2"></i>
+                    Website PT Multi Klin Nusantara
+                </a>
+            </div>
+            
+            <!-- Ikon Sosial -->
+            <div class="flex justify-center gap-4">
+                <a href="#" class="w-11 h-11 bg-[#0b1e36] hover:bg-[#b58d4c] rounded-full flex items-center justify-center text-white transition-all hover-lift">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="w-11 h-11 bg-[#0b1e36] hover:bg-[#b58d4c] rounded-full flex items-center justify-center text-white transition-all hover-lift">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="w-11 h-11 bg-[#0b1e36] hover:bg-[#b58d4c] rounded-full flex items-center justify-center text-white transition-all hover-lift">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="#" class="w-11 h-11 bg-[#0b1e36] hover:bg-[#b58d4c] rounded-full flex items-center justify-center text-white transition-all hover-lift">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            
+            <!-- Footer -->
+            <div class="text-center mt-8 pt-4 border-t border-[#0b1e36]/10">
+                <p class="text-xs text-[#0b1e36]/50">
+                    © 2026 PT Multi Klin Nusantara
+                </p>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
